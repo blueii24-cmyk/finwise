@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e7c66">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Budget Planner & Savings Goal</title>
+  <meta name="description" content="Use FinWise calculators to estimate your budget and track savings progress.">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i>FinWise</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="mainNav" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    <ul id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="planner.html">Budget Planner</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section id="budget">
+  <div class="container">
+    <div class="section-head">
+      <h2>Budget Planner</h2>
+      <p>Enter your monthly income and expenses, then calculate what is left.</p>
+    </div>
+    <div class="two">
+      <form class="card" id="budgetForm" novalidate>
+        <div class="fields">
+          <div class="full"><label for="income">Monthly Income (₹)</label><input type="number" id="income" min="0" placeholder="20000"></div>
+          <div><label for="food">Food (₹)</label><input type="number" id="food" min="0" placeholder="4000"></div>
+          <div><label for="transport">Transport (₹)</label><input type="number" id="transport" min="0" placeholder="1500"></div>
+          <div><label for="education">Education (₹)</label><input type="number" id="education" min="0" placeholder="3000"></div>
+          <div><label for="entertainment">Entertainment (₹)</label><input type="number" id="entertainment" min="0" placeholder="1500"></div>
+          <div><label for="shopping">Shopping (₹)</label><input type="number" id="shopping" min="0" placeholder="1000"></div>
+          <div><label for="other">Other Expenses (₹)</label><input type="number" id="other" min="0" placeholder="1000"></div>
+        </div>
+        <button class="btn btn-primary form-button" type="submit"><i class="fa-solid fa-calculator" aria-hidden="true"></i> Calculate Budget</button>
+        <p class="msg" id="budgetMsg" role="alert"></p>
+      </form>
+
+      <div class="card">
+        <p id="budgetHint" class="hint">Your results will appear here after you press <b>Calculate Budget</b>.</p>
+        <div id="budgetOut" hidden>
+          <div class="results">
+            <div class="res"><small>Income</small><b id="rIncome"></b></div>
+            <div class="res"><small>Total Expenses</small><b id="rExpense"></b></div>
+            <div class="res"><small>Remaining Balance</small><b id="rRemain"></b></div>
+            <div class="res"><small>Savings Rate</small><b id="rRate"></b></div>
+          </div>
+          <div class="row"><span>Savings rate</span><span id="rRateText"></span></div>
+          <div class="bar"><span id="rBar"></span></div>
+          <div class="row"><span>Where your money goes</span></div>
+          <div class="stack" id="stack"></div>
+          <div class="legend" id="legend"></div>
+          <p class="msg" id="budgetAdvice"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="savings" class="alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Savings Goal</h2>
+      <p>Find out roughly how many months it will take to reach your target.</p>
+    </div>
+    <div class="two">
+      <form class="card" id="goalForm" novalidate>
+        <label for="goal">Target Amount (₹)</label><input type="number" id="goal" min="0" placeholder="50000">
+        <label for="saved">Current Savings (₹)</label><input type="number" id="saved" min="0" placeholder="10000">
+        <label for="monthly">Monthly Savings (₹)</label><input type="number" id="monthly" min="0" placeholder="5000">
+        <button class="btn btn-primary form-button" type="submit"><i class="fa-solid fa-clock" aria-hidden="true"></i> Estimate Time</button>
+        <p class="msg" id="goalMsg" role="alert"></p>
+      </form>
+      <div class="card">
+        <p id="goalHint" class="hint">Fill in the three amounts to see your estimate.</p>
+        <div id="goalOut" hidden>
+          <p class="big" id="goalResult"></p>
+          <div class="row"><span>Progress so far</span><span id="goalPct"></span></div>
+          <div class="bar"><span id="goalBar"></span></div>
+          <p class="hint" id="goalNote"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div><a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i>FinWise</a><p>Smart money management made simple.</p></div>
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="features.html">Features</a></li>
+        <li><a href="planner.html">Budget Planner</a></li><li><a href="dashboard.html">Dashboard</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p class="disclaimer">FinWise is a student project created for educational purposes. It does not provide financial advice or connect to real financial accounts.</p>
+    <p class="disclaimer">Made by Rahul Velip.</p>
+    <p class="disclaimer">© <span id="year"></span> FinWise</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

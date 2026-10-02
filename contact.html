@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e7c66">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Contact FinWise</title>
+  <meta name="description" content="Send your questions and feedback to the FinWise student project.">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i>FinWise</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="mainNav" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    <ul id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="planner.html">Budget Planner</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section id="contact" class="alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Contact &amp; Feedback</h2>
+      <p>Questions or suggestions? Send us a message. (Demo form: nothing is actually sent.)</p>
+    </div>
+    <form class="card form-narrow" id="contactForm">
+      <label for="cName">Name</label><input id="cName" required>
+      <label for="cEmail">Email</label><input type="email" id="cEmail" required>
+      <label for="cSubject">Subject</label><input id="cSubject" required>
+      <label for="cMessage">Message</label><textarea id="cMessage" rows="5" required></textarea>
+      <button class="btn btn-primary form-button" type="submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message</button>
+      <p class="msg" id="contactMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div><a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i>FinWise</a><p>Smart money management made simple.</p></div>
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="features.html">Features</a></li>
+        <li><a href="planner.html">Budget Planner</a></li><li><a href="dashboard.html">Dashboard</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p class="disclaimer">FinWise is a student project created for educational purposes. It does not provide financial advice or connect to real financial accounts.</p>
+    <p class="disclaimer">Made by Rahul Velip.</p>
+    <p class="disclaimer">© <span id="year"></span> FinWise</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

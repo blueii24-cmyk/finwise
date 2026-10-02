@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e7c66">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>FinWise – Smart money management made simple</title>
+  <meta name="description" content="FinWise is a student FinTech project for personal finance management.">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i>FinWise</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="mainNav" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    <ul id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="planner.html">Budget Planner</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <h1>Manage your money. Build your future.</h1>
+      <p><b>FinWise</b> helps students and young adults track income and expenses, plan a monthly budget and work towards savings goals, all in one simple place.</p>
+      <div class="hero-actions">
+        <a href="planner.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i> Start Planning</a>
+        <a href="features.html" class="btn btn-ghost"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> Explore Features</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row-top"><b>A sample month</b><span class="demo">Demo data</span></div>
+      <p class="big">₹7,500 <small>left to save</small></p>
+      <div class="stack">
+        <span class="c0" style="width:30%"></span><span class="c1" style="width:10%"></span>
+        <span class="c2" style="width:20%"></span><span class="c3" style="width:10%"></span>
+        <span class="cs" style="width:30%"></span>
+      </div>
+      <div class="legend">
+        <span><i class="c0"></i>Food</span><span><i class="c1"></i>Transport</span>
+        <span><i class="c2"></i>Education</span><span><i class="c3"></i>Fun</span><span><i class="cs"></i>Savings</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-sec">
+  <div class="container">
+    <p class="note"><span class="demo">Sample data</span> Example figures for a student's month</p>
+    <div class="grid g4">
+      <div class="card stat"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i><b>₹25,000</b>Monthly Income</div>
+      <div class="card stat"><i class="fa-solid fa-receipt" aria-hidden="true"></i><b>₹17,500</b>Monthly Expenses</div>
+      <div class="card stat"><i class="fa-solid fa-wallet" aria-hidden="true"></i><b>₹7,500</b>Available Balance</div>
+      <div class="card stat"><i class="fa-solid fa-bullseye" aria-hidden="true"></i><b>30%</b>Savings Target</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div><a href="index.html" class="logo"><i class="fa-solid fa-seedling"></i>FinWise</a><p>Smart money management made simple.</p></div>
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="features.html">Features</a></li>
+        <li><a href="planner.html">Budget Planner</a></li><li><a href="dashboard.html">Dashboard</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p class="disclaimer">FinWise is a student project created for educational purposes. It does not provide financial advice or connect to real financial accounts.</p>
+    <p class="disclaimer">Made by Rahul Velip.</p>
+    <p class="disclaimer">© <span id="year"></span> FinWise</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
